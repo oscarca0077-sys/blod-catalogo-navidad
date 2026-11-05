@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f2e8">
+  <meta name="description" content="Catálogo navideño de pijamas blod. Explora 16 vistas, consulta tallas y pide información por WhatsApp.">
+  <title>Navidad en familia | blod</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,20,0;9..144,600,20,0;9..144,700,20,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#coleccion">Ir al catálogo</a>
+  <header class="site-head">
+    <a class="brand" href="#inicio" aria-label="blod, ir al inicio"><img src="assets/logo-blod.png" alt="Logo original de blod"></a>
+    <nav aria-label="Navegación principal"><a href="#coleccion">Colección</a><a href="#tallas">Tallas</a><a href="#contacto" class="head-contact">Pedir por WhatsApp</a></nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="season">Colección navideña</p>
+        <h1 id="hero-title">Navidad <em>en familia</em><span>con blod</span></h1>
+        <p class="hero-deck">Pijamas para compartir los momentos de esta temporada. Conoce los diseños y elige el tuyo.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#coleccion">Ver el catálogo <span aria-hidden="true">↘</span></a><a class="text-link" href="#tallas">Consultar tallas</a></div>
+        <p class="hero-note">Piel de durazno · Tallas para niños y adultos</p>
+      </div>
+      <div class="hero-art" aria-label="Pijama navideña de la colección">
+        <div class="paper"><img src="assets/photo-01.jpg" alt="Pijama navideña verde de la colección blod" fetchpriority="high"><span class="paper-caption">Navidad para todos</span></div>
+        <div class="hero-index">01 <span>/</span> 16</div>
+      </div>
+    </section>
+
+    <section class="collection" id="coleccion" aria-labelledby="collection-title">
+      <div class="section-intro"><div><p class="season">El muestrario</p><h2 id="collection-title">Encuentra tu diseño</h2></div><p>Desliza y explora las 16 vistas de la colección. Toca una imagen para verla completa y consultar por WhatsApp.</p></div>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="details" id="tallas" aria-labelledby="sizes-title">
+      <div class="details-heading"><p class="season">Para todos</p><h2 id="sizes-title">Tallas para compartir</h2><p>Material: piel de durazno.</p></div>
+      <div class="size-list"><div><span>Adultos</span><strong>S · M · L · XL · XXL</strong></div><div><span>Niños y niñas</span><strong>8 · 10 · 12 · 14 · 16</strong></div></div>
+    </section>
+
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <p class="season">Tu próxima Navidad empieza aquí</p>
+      <h2 id="contact-title">Hablemos de tu pijama favorita.</h2>
+      <p>Indícanos el número de la vista y la talla que buscas. Te contamos el precio y resolvemos tus preguntas.</p>
+      <a class="button button-light" href="https://api.whatsapp.com/send/?phone=573002149399" target="_blank" rel="noopener noreferrer">Escribir al WhatsApp <span aria-hidden="true">↗</span></a>
+      <span class="contact-number">+57 300 214 9399</span>
+    </section>
+  </main>
+  <footer><img src="assets/logo-blod.png" alt="blod"><span>Porque la calidad se siente desde adentro.</span><a href="https://www.instagram.com/blodtumarcaideal/" target="_blank" rel="noopener noreferrer">@blodtumarcaideal</a></footer>
+
+  <dialog id="product-dialog" aria-label="Vista de producto"><button class="dialog-close" type="button" aria-label="Cerrar vista">Cerrar ×</button><div class="dialog-image"><img id="dialog-photo" src="" alt=""></div><div class="dialog-info"><span id="dialog-index"></span><h2>Pijama navideña</h2><p>Piel de durazno</p><p>Adultos: S · M · L · XL · XXL<br>Niños: 8 · 10 · 12 · 14 · 16</p><a id="dialog-whatsapp" class="button button-primary" href="#" target="_blank" rel="noopener noreferrer">Consultar este diseño <span aria-hidden="true">↗</span></a></div></dialog>
+</body>
+</html>
