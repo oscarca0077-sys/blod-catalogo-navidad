@@ -9,15 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,20,0;9..144,600,20,0;9..144,700,20,0&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
   <script src="other-album.js?v=3" defer></script>
   <script src="script.js?v=8" defer></script>
 </head>
 <body>
   <a class="skip" href="#coleccion">Ir al catálogo</a>
   <header class="site-head">
-    <a class="brand" href="#inicio" aria-label="blod, ir al inicio"><img src="assets/logo-blod.png" alt="Logo original de blod"></a>
-    <nav aria-label="Navegación principal"><a href="#coleccion">Navideñas</a><a href="#otros-modelos">Otros Modelos</a><a href="#tallas">Tallas</a><a href="#contacto" class="head-contact">Pedir por WhatsApp</a></nav>
+    <div class="head-inner">
+      <a class="brand" href="#inicio" aria-label="blod, ir al inicio"><img src="assets/logo-blod.png" alt="Logo original de blod"></a>
+      <nav aria-label="Navegación principal"><a href="#coleccion">Navideñas</a><a href="#otros-modelos">Otros Modelos</a><a href="#tallas">Tallas</a><a href="#precios">Precios</a></nav>
+      <a href="#contacto" class="head-contact">Pedir por WhatsApp</a>
+    </div>
   </header>
 
   <main>
@@ -45,6 +48,15 @@
       <div class="gallery" id="gallery-other"></div>
     </section>
 
+    <section class="details prices" id="precios" aria-labelledby="prices-title">
+      <div class="details-heading"><h2 id="prices-title">Precios</h2><p>Encuentra la opción ideal para compartir.</p></div>
+      <div class="price-list">
+        <div><span>Pijamas para adultos</span><strong>$70.000</strong></div>
+        <div><span>Pijamas para niños y niñas</span><strong>$65.000</strong></div>
+        <div><span>Combo familiar <small>3 o más pijamas</small></span><strong>$65.000 <small>cada una</small></strong></div>
+      </div>
+    </section>
+
     <section class="details" id="tallas" aria-labelledby="sizes-title">
       <div class="details-heading"><p class="season">Para todos</p><h2 id="sizes-title">Tallas para compartir</h2><p>Estas tallas aplican a todas las pijamas del catálogo.</p></div>
       <div class="size-list"><div><span>Adultos</span><strong class="size-values"><span>S-M</span><span>L-XL</span><span>XXL</span></strong></div><div><span>Niños y niñas</span><strong class="size-values"><span>6-8</span><span>10-12</span><span>14-16</span></strong></div></div>
@@ -53,7 +65,7 @@
     <section class="contact" id="contacto" aria-labelledby="contact-title">
       <p class="season">Tu próxima pijama empieza aquí</p>
       <h2 id="contact-title">Hablemos de tu pijama favorita.</h2>
-      <p>Indícanos el número de la vista y la talla que buscas. Te contamos el precio y resolvemos tus preguntas.</p>
+      <p>Indícanos el número de la vista y la talla que buscas. Resolvemos tus preguntas.</p>
       <a class="button button-light" href="https://api.whatsapp.com/send/?phone=573002149399" target="_blank" rel="noopener noreferrer">Escribir al WhatsApp <span aria-hidden="true">↗</span></a>
       <span class="contact-number">+57 300 214 9399</span>
     </section>
