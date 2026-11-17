@@ -6,12 +6,13 @@ const dialogIndex = document.getElementById('dialog-index');
 const dialogTitle = document.getElementById('dialog-title');
 const dialogMaterial = document.getElementById('dialog-material');
 const dialogWhatsapp = document.getElementById('dialog-whatsapp');
+const restoredPhotos = new Set([1, 3, 4, 5, 16]);
 
 const photoNumbers = [...Array.from({ length: 21 }, (_, index) => index + 1), 24];
 const photoItems = photoNumbers.map((photoNumber, index) => ({
   viewNumber: index + 1,
   photoNumber,
-  src: `assets/photo-${String(photoNumber).padStart(2, '0')}-christmas.webp`,
+  src: `assets/photo-${String(photoNumber).padStart(2, '0')}-${restoredPhotos.has(photoNumber) ? 'restaurada.svg' : 'christmas.webp'}`,
   familyOf: null,
 }));
 photoItems.push({
