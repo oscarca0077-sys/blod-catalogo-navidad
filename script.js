@@ -33,7 +33,7 @@ const otherItems = otherAlbumNumbers.map((albumNumber, index) => ({
   src: `assets/album2-${String(albumNumber).padStart(2, '0')}-christmas.webp`,
   category: 'Otros Modelos',
 }));
-const totalViews = photoItems.length + otherItems.length;
+const totalViews = photoItems.length + otherItems.length + 4;
 
 function addCard({ viewNumber, photoNumber, src: photoSrc, familyOf, category }, target) {
   const number = String(viewNumber).padStart(2, '0');
@@ -63,3 +63,12 @@ otherItems.forEach(item => addCard(item, galleryOther));
 
 document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+
+const betplayItems=[['assets/betplay-163.png','Nacional'],['assets/betplay-164.png','Santa Fe'],['assets/betplay-165.png','Millonarios'],['assets/betplay-166.png','Millonarios']];
+betplayItems.forEach(([src,name],index)=>{
+ const view=163+index;
+ const card=document.createElement('button');card.className='product';card.type='button';card.setAttribute('aria-label',`Abrir vista ${view}, ${name}`);
+ card.innerHTML=`<img src="${src}" alt="Pijama ${name}, vista ${view}" loading="lazy"><span class="product-line"><strong>Vista ${view}</strong><span>Ver diseño ↗</span></span>`;
+ card.addEventListener('click',()=>{dialogPhoto.src=src;dialogPhoto.alt=name;dialogIndex.textContent=`VISTA ${view} / 166`;dialogTitle.textContent=name;dialogMaterial.textContent='';dialogWhatsapp.href='https://api.whatsapp.com/send/?phone=573002149399&text='+encodeURIComponent(`Hola, quiero consultar la pijama de la vista ${view} del catálogo blod Betplay 2026.`);dialog.showModal()});
+ document.getElementById('gallery-betplay').append(card);
+});
